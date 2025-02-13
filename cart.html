@@ -1,0 +1,131 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cart - Food Ordering</title>
+        <link rel="stylesheet" href="cart.css">
+    </head>
+    <body style="background: url(background.jpg); height: 100vh; background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed ;">
+              <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="loader-logo">
+        <img src="https://via.placeholder.com/150/FFD700/000000?text=FoodOrder" alt="Food Ordering Logo">
+      </div>
+      <div class="loader"></div>
+    </div>
+  </div>
+        <nav class="navbar">
+            <div class="logo"><a href="home.html"><img src="logo.png" alt="" width="100px"></a></div>
+            <div class="search-bar">
+                
+                <input type="text" placeholder="Search for food...">
+                <img src="search.png" alt="" width="35px" style="position: relative; right: 55px; top:12px">
+            </div>
+            <div class="profile">
+                <a href="#"><img src="profile.png" alt="User Icon" class="user-icon"></a>
+                <div class="profile-menu">
+                    <a href="profile.html">Profile</a>
+                    <a href="#">Cart</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="cart-container">
+            <h1>Your Cart</h1>
+            <div class="cart-items" id="cart-items">
+                
+                <div class="cart-item" data-price="100.00">
+                    <img src="Masala-Dosa.png" alt="Masala-Dosa" class="food-image">
+                    <div class="food-details">
+                        <h2>Masala Dosa</h2>
+                        <!-- <div class="customization">
+                            <label><input type="checkbox" class="extra-option"> Extra Cheese</label>
+                            <label><input type="checkbox" class="extra-option"> Sauce</label>
+                            <label><input type="checkbox" class="extra-option"> Mayo</label>
+                        </div> -->
+                        <div class="quantity">
+                            <button class="qty-btn" onclick="decreaseQuantity(this)">-</button>
+                            <input type="text" class="qty-input" value="1" readonly>
+                            <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
+                        </div>
+                    </div>
+                    <div class="food-pricing">
+                        <p class="food-subtotal">₹100.00</p>
+                        <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="cart-total">
+                <p>Total: <span id="total-price">₹100.00</span></p>
+                
+                <!-- Takeaway Time Selection -->
+                <div class="takeaway-time">
+                    <label for="pickup-time">Select Pickup Time:</label>
+                    <input type="time" id="pickup-time" name="pickup-time">
+                </div>
+            </div>
+            
+
+            
+            <div class="cart-buttons">
+                <a href="home.html"><button class="btn cancel" style="height: 42px; position: relative; right: 305px;">CANCEL</button></a>
+                <button class="btn add-more" onclick="openModal()">ADD MORE</button>
+                <a href="payment.html"><button class="btn place-order" onclick="placeOrder()">PLACE ORDER</button></a>
+                
+        
+            </div>
+        </div>
+
+    
+        <div id="addMoreModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Add More Items</h2>
+                <div class="modal-items">
+                
+
+                    
+                    <div class="modal-item">
+                        <img src="Gobi-Manchurian.png" alt="Gobi-Manchurian" class="modal-food-image">
+                        <div class="modal-food-details">
+                            <h3>Gobi Manchurian</h3>
+                            <p>Price: ₹90.00</p>
+                            <button class="btn modal-add-btn" onclick="addItemToCart('Gobi-Manchurian', 'Gobi-Manchurian.png', 90.00)">Add</button>
+                        </div>
+                    </div>
+                    <div class="modal-item">
+                        <img src="Fried-Rice.png" alt="Fried-Rice" class="modal-food-image">
+                        <div class="modal-food-details">
+                            <h3>Fried Rice</h3>
+                            <p>Price: ₹80.00</p>
+                            <button class="btn modal-add-btn" onclick="addItemToCart('Fried-Rice', 'Fried-Rice.png', 80.00)">Add</button>
+                        </div>
+                    </div>
+                    <div class="modal-item">
+                        <img src="Noodle.png" alt="Noodles" class="modal-food-image">
+                        <div class="modal-food-details">
+                            <h3>Noodles</h3>
+                            <p>Price: ₹80.00</p>
+                            <button class="btn modal-add-btn" onclick="addItemToCart('Noodles', 'Noodle.png', 80.00)">Add</button>
+                        </div>
+                    </div>
+                    <!-- Add more items as needed -->
+                </div>
+            </div>
+        </div>
+
+        <script src="cart.js"></script>
+        <script>
+            // Wait until the page is fully loaded before hiding the preloader
+            window.addEventListener('load', function () {
+              document.getElementById('preloader').style.display = 'none';  // Hide preloader
+              document.getElementById('main-content').style.display = 'block';  // Show the main content
+            });
+          </script>
+    </body>
+    </html>

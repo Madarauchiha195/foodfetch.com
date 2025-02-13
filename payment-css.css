@@ -1,0 +1,162 @@
+/* Payment Gateway Styles */
+.payment-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.payment-container h1 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.payment-details {
+    margin-bottom: 30px;
+}
+
+.payment-details h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.qr-code img {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+}
+
+.back-to-order {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-order:hover {
+    background-color: #e6b800;
+}
+.done{
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.done:hover{
+    background-color: #e6b800;
+}
+.bill{
+    position: relative;
+    top: 20px;
+}
+.download-bill{
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.download-bill:hover{
+    background-color: #e6b800;
+}
+.share-bill{
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.share-bill:hover{
+   background-color: #e6b800; 
+}
+/* Toast Notification Styles */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it is on top of other content */
+}
+
+.preloader-content {
+    text-align: center;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #e0d616; /* Blue */
+    border-radius: 50%;
+    width: 50px; /* Size of the loader */
+    height: 50px; /* Size of the loader */
+    animation: spin 1s linear infinite; /* Animation */
+}
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

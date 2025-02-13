@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering Website</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js"></script>
+</head>
+
+<body
+    style="background: url(background.jpg); height: 100vh; background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed ;">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="loader-logo">
+                <img src="https://via.placeholder.com/150/FFD700/000000?text=FoodOrder" alt="Food Ordering Logo">
+            </div>
+            <div class="loader"></div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="logo.png" alt="Logo"></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for food...">
+            <img src="search.png" alt="Search Icon">
+        </div>
+        <div class="cart-image">
+            <a href="cart.html"><img src="cart-image.png" alt="Cart"></a>
+        </div>
+        <div class="profile">
+            <a href="#"><img src="profile.png" alt="User Icon" class="user-icon"></a>
+            <div class="profile-menu">
+                <a href="profile.html">Profile</a>
+                <a href="cart.html">Cart</a>
+                <a href="login.html">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Category Buttons -->
+    <!-- <div class="category-buttons">
+        <button class="category-btn">CANTEEN-1</button>
+        <button class="category-btn">CANTEEN-2</button>
+        <button class="category-btn">CANTEEN-3</button>
+    </div> -->
+
+    <!-- Food Item Grid -->
+    <!-- Repeating Food Card Structure canteen wise -->
+    <div class="category-div">
+        <div class="category-btn">
+            <div>
+                <h3>Sri Annapoorna Grand Veg</h3>
+            </div>
+        </div>
+    </div>
+    <div class="food-grid">
+        <!-- Repeating Food Card Structure for canteen-1 -->
+        <div class="food-card">
+            <img src="tea.png" alt="Food Image" width="100px" height="100px">
+            <h3>Tea</h3>
+            <p class="price">₹12</p>
+            <button class="cart-btn" onclick="toggleCart('Tea', 'tea.png', 12.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="coffee.png" alt="Food Image">
+            <h3>Coffee</h3>
+            <p class="price">₹12</p>
+            <button class="cart-btn" onclick="toggleCart('Coffee', 'coffee.png', 12.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Badam Milk.png" alt="Food Image">
+            <h3>Badam Milk</h3>
+            <p class="price">₹20</p>
+            <button class="cart-btn" onclick="toggleCart('Badam Milk', 'Badam Milk.png', 20.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Idly.png" alt="Food Image">
+            <h3>Idly-2PC</h3>
+            <p class="price">₹30</p>
+            <button class="cart-btn" onclick="toggleCart('Idly-2PC', 'Idly.png', 30.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="vada.png" alt="Food Image">
+            <h3>Vada</h3>
+            <p class="price">₹30</p>
+            <button class="cart-btn" onclick="toggleCart('Vada', 'vada.png', 30.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Rice Bath.png" alt="Food Image" style="width: 200px; height: 200px; object-fit: contain;">
+            <h3>Rice Bath</h3>
+            <p class="price">₹40</p>
+            <button class="cart-btn" onclick="toggleCart('Rice Bath', 'Rice Bath.png', 40.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="curd rice.png" alt="Food Image">
+            <h3>Curd Rice</h3>
+            <p class="price">₹40</p>
+            <button class="cart-btn" onclick="toggleCart('Curd Rice', 'curd rice.png', 40.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="South IND Meals.png" alt="Food Image">
+            <h3>South IND Meals</h3>
+            <p class="price">₹60</p>
+            <button class="cart-btn" onclick="toggleCart('South IND Meals', 'South IND Meals.png', 60.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="rice sambar.png" alt="Food Image">
+            <h3>Rice Sambar</h3>
+            <p class="price">₹40</p>
+            <button class="cart-btn" onclick="toggleCart('Rice Sambar', 'rice sambar.png', 40.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Chapathi Curry.png" alt="Food Image">
+            <h3>Chapathi Curry</h3>
+            <p class="price">₹60</p>
+            <button class="cart-btn" onclick="toggleCart('Chapathi Curry', 'Chapathi Curry.png', 60.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="set dosa.png" alt="Food Image">
+            <h3>Set Dosa</h3>
+            <p class="price">₹55</p>
+            <button class="cart-btn" onclick="toggleCart('Set Dosa', 'set dosa.png', 55.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Masala-Dosa.png" alt="Food Image">
+            <h3>Masala Dosa</h3>
+            <p class="price">₹55</p>
+            <button class="cart-btn" onclick="toggleCart('Masala Dosa', 'Masala-Dosa.png', 55.00, this)">Add
+                to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="onion dosa.png" alt="Food Image">
+            <h3>Onion Dosa</h3>
+            <p class="price">₹60</p>
+            <button class="cart-btn" onclick="toggleCart('Onion Dosa', 'onion dosa.png', 60.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="open butter dosa.png" alt="Food Image">
+            <h3>Open Butter Dosa</h3>
+            <p class="price">₹80</p>
+            <button class="cart-btn" onclick="toggleCart('Open Butter Dosa', 'open butter dosa.png', 80.00, this)">Add
+                to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Gobi-Manchurian.png" alt="Food Image">
+            <h3>Gobi Manchurian</h3>
+            <p class="price">₹90</p>
+            <button class="cart-btn" onclick="toggleCart('Gobi Manchurian', 'Gobi-Manchurian.png', 90.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Paneer Chilli.png" alt="Food Image" style="width: 250px; height: 200px; object-fit: contain;">
+            <h3>Paneer Chilli</h3>
+            <p class="price">₹100</p>
+            <button class="cart-btn" onclick="toggleCart('Paneer Chilli', 'Paneer Chilli.png', 100.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Paneer Manchurian.png" alt="Food Image" style="width: 200px; height: 200px; object-fit: contain;">
+            <h3>Paneer Manchurian</h3>
+            <p class="price">₹100</p>
+            <button class="cart-btn"
+                onclick="toggleCart('Paneer Manchurian', 'Paneer Manchurian.png', 100.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="gobi 65.png" alt="Food Image" style="width: 200px; height: 200px; object-fit: contain;">
+            <h3>Gobi 65</h3>
+            <p class="price">₹85</p>
+            <button class="cart-btn" onclick="toggleCart('Gobi 65', 'gobi 65.png', 85.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="paneer 65.png" alt="Food Image">
+            <h3>Paneer 65</h3>
+            <p class="price">₹100</p>
+            <button class="cart-btn" onclick="toggleCart('Paneer 65', 'paneer 65.png', 100.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Gobi Chilli.png" alt="Food Image" style="width: 250px; height: 200px; object-fit: contain;">
+            <h3>Gobi Chilli</h3>
+            <p class="price">₹90</p>
+            <button class="cart-btn" onclick="toggleCart('Gobi Chilli', 'Gobi Chilli.png', 90.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="fried-ricee-removebg-preview.png" alt="Food Image" style="width: 250px; height: 200px; object-fit: contain;">
+            <h3>Fried Rice</h3>
+            <p class="price">₹90</p>
+            <button class="cart-btn"
+                onclick="toggleCart('Fried Rice', 'fried-ricee-removebg-preview.png', 90.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Mushroom FRD.Rice.png" alt="Food Image">
+            <h3>Mushroom FRD.Rice</h3>
+            <p class="price">₹90</p>
+            <button class="cart-btn" onclick="toggleCart('Mushroom FRD.Rice', 'Mushroom FRD.Rice.png', 90.00, this)">Add
+                to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Singapoore FRD.Rice.png" alt="Food Image">
+            <h3>Singapoore FRD.Rice</h3>
+            <p class="price">₹90</p>
+            <button class="cart-btn"
+                onclick="toggleCart('Singapoore FRD.Rice', 'Singapoore FRD.Rice.png', 90.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+    </div>
+    <div class="category-div">
+        <div class="category-btn">
+            <div>
+                <h3>Finer Juice and Chaats</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Repeating Food Card Structure for canteen-2 -->
+    <div class="food-grid">
+        <div class="food-card">
+            <img src="sandwitch.png" alt="Food Image" style="width: 250px; height: 200px; object-fit: contain; object-position: top left ;">
+            <h3>Grill Sandwich</h3>
+            <p class="price">₹45</p>
+            <button class="cart-btn" onclick="toggleCart('Sandwich', 'sandwitch.png', 45.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="download-removebg-preview.png" alt="Food Image" style="width: 250px; height: 200px; ">
+            <h3>Veg Maggi</h3>
+            <p class="price">₹40</p>
+            <button class="cart-btn"
+                onclick="toggleCart('Veg Maggiee', 'download-removebg-preview.png', 40.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="samosa.jpg" alt="Food Image">
+            <h3>Samosa</h3>
+            <p class="price">₹10</p>
+            <button class="cart-btn" onclick="toggleCart('Samosa', 'samosa.jpg', 10.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="samosa chat.png" alt="Food Image" style="width: 200px; height: 200px; object-fit: contain;">
+            <h3>Samosa Chaat</h3>
+            <p class="price">₹25</p>
+            <button class="cart-btn" onclick="toggleCart('Samosa Chat', 'samosa chat.png', 25.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="roll.png" alt="Food Image" style="width: 250px; height: 200px; object-fit: contain;">
+            <h3>Veg Roll</h3>
+            <p class="price">₹45</p>
+            <button class="cart-btn" onclick="toggleCart('Veg Roll', 'roll.png', 45.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="fruit salad.png" alt="Food Image">
+            <h3>Fruit Salad</h3>
+            <p class="price">₹45</p>
+            <button class="cart-btn" onclick="toggleCart('Friut Salad', 'fruit salad.png', 45.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Peanut Chaat.png" alt="Food Image" style="width: 350px; height: 200px; object-fit: contain; object-position:top left ;">
+            <h3>Peanut Chaat</h3>
+            <p class="price">₹45</p>
+            <button class="cart-btn" onclick="toggleCart('Peanut chat', 'Peanut Chaat.png', 45.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Veg pasta.png" alt="Food Image">
+            <h3>Veg Pasta</h3>
+            <p class="price">₹50</p>
+            <button class="cart-btn" onclick="toggleCart('Veg Pasta', 'Veg pasta.png', 50.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+    </div>
+    <div class="category-div">
+        <div class="category-btn">
+            <div>
+                <h3>NESCAFE</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Repeating Food Card Structure for canteen-3 -->
+    <div class="food-grid">
+        <div class="food-card">
+            <img src="Veg Frankie wrap.png" alt="Food Image" >
+            <h3>Veg Frankie Wrap</h3>
+            <p class="price">₹50</p>
+            <button class="cart-btn" onclick="toggleCart('Veg Frankie Wrap', 'Veg Frankie wrap.png', 50.00, this)">Add to Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="veg noodles.png" alt="Food Image">
+            <h3>Veg Noodles</h3>
+            <p class="price">₹60</p>
+            <button class="cart-btn" onclick="toggleCart('Veg Noodles', 'veg noodles.png', 60.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Veg Burger.png" alt="Food Image" style="width: 200px; height: 200px; object-fit: contain;">
+            <h3>Aloo Burger</h3>
+            <p class="price">₹60</p>
+            <button class="cart-btn" onclick="toggleCart('Aloo Burger', 'Veg Burger.png', 60.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Chicken Burger.png" alt="Food Image" style="width: 200px; height: 200px; object-fit: contain;"    >
+            <h3>Chicken Burger</h3>
+            <p class="price">₹80</p>
+            <button class="cart-btn" onclick="toggleCart('Chicken Burger', 'Chicken Burger.png', 80.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Cheese Sandwich.png" alt="Food Image">
+            <h3>Cheese Sandwich</h3>
+            <p class="price">₹50</p>
+            <button class="cart-btn" onclick="toggleCart('Cheese Sandwich', 'Cheese Sandwich.png', 50.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Chicken Sandwich.png" alt="Food Image"style="width: 200px; height: 200px; object-fit: contain;">
+            <h3>Chicken Sandwich</h3>
+            <p class="price">₹40</p>
+            <button class="cart-btn" onclick="toggleCart('Chicken Sandwich', 'Chicken Sandwich.png', 60.00, this)">Add
+                to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="fries.png" alt="Food Image">
+            <h3>French Fries</h3>
+            <p class="price">₹40</p>
+            <button class="cart-btn" onclick="toggleCart('French fries', 'fries.png', 40.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <div class="food-card">
+            <img src="Egg Maggi Noodles.png" alt="Food Image">
+            <h3>Egg Maggi Noodles</h3>
+            <p class="price">₹60</p>
+            <button class="cart-btn" onclick="toggleCart('Egg Maggi Noodles', 'Egg Maggi Noodles.png', 60.00, this)">Add to
+                Cart</button>
+            <!-- <p class="rating">★★★★☆</p> -->
+        </div>
+        <!-- Add more food cards as needed for the 4x5 grid -->
+        <!-- Example: Repeat this block 20 times -->
+    </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="about">
+                <h3>About Us</h3>
+                <p>Learn more about our story, our values, and our mission.</p>
+            </div>
+            <div class="links">
+                <h3>Learn More</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: contact@foodie.com</p>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Wait until the page is fully loaded before hiding the preloader
+        window.addEventListener('load', function () {
+            document.getElementById('preloader').style.display = 'none';  // Hide preloader
+            document.getElementById('main-content').style.display = 'block';  // Show the main content
+        });
+    </script>
+
+</body>
+
+</html>

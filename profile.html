@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="profile.css">
+
+</head>
+
+<body
+  style="background: url(background.jpg); height: 100vh; background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+
+  <nav class="navbar">
+    <div class="logo"><a href="home.html"><img src="logo.png" alt="" width="100px"></a></div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for food...">
+    </div>
+    <img src="search.png" alt="" width="35px" style="position: relative; right: 220px; bottom: -2px;">
+    <div class="profile">
+      <img src="profile.png" alt="User  Icon" class="user-icon">
+      <div class="profile-menu">
+        <a href="#">Profile</a>
+        <a href="cart.html">Cart</a>
+        <a href="login.html">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="loader-logo">
+        <img src="https://via.placeholder.com/150/FFD700/000000?text=FoodOrder" alt="Food Ordering Logo">
+      </div>
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <!-- Main Content (Your food ordering website) -->
+  <div id="main-content" style="display:none;">
+    <div class="profile-page">
+      <header class="profile-header">
+        <img src="profile.png" alt="Profile Picture" class="profile-pic">
+        <h2 class="profile-name"></h2>
+      </header>
+
+      <section class="profile-details">
+        <div class="phoneNo">
+          <p><strong>Phone:</strong> <span id="phoneNo"></span></p>
+        </div>
+        <div class="collegeID">
+          <p><strong>Email:</strong> <span id="collegeID"></span></p>
+        </div>
+        <p><strong>Address:</strong></p>
+      </section>
+
+      <section class="previous-orders">
+        <h3 id="toggleOrders">Previous Orders</h3>
+        <div id="orderList" class="hidden">
+          <!-- Placeholder for order items -->
+        </div>
+      </section>
+
+      <button class="back-button" onclick="window.location.href='home.html'">Back to Home</button>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+
+  <script>
+    // Wait until the page is fully loaded before hiding the preloader
+    window.addEventListener('load', function () {
+      document.getElementById('preloader').style.display = 'none';  // Hide preloader
+      document.getElementById('main-content').style.display = 'block';  // Show the main content
+    });
+  </script>
+
+</body>
+
+</html>

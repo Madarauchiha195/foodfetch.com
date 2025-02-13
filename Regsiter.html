@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | College Signup Form</title>
+    <link rel="stylesheet" href="login.css">
+    
+    <style>
+        /* Centering the wrapper on the page */
+        .wrapper {
+            width: 500px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+
+        /* Title styling */
+        .wrapper h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        /* Form styling */
+        .input-box {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ffffff6f;
+            border-radius: 40px;
+            color: black;
+        }
+
+        /* Styling for the Sign Up button */
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #4CAF50;
+            border: 2px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            border: 2px solid rgba(0, 0, 0, 0.236);
+        }
+
+        /* Additional styles to keep consistency with the login page */
+        .register-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .register-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 85px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .eye-icon:hover {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="registerForm">
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" id="firstName" placeholder="First Name" required>
+            </div>
+            <div class="input-box">
+                <input type="text" id="lastName" placeholder="Last Name" required>
+            </div>
+            <div class="input-box">
+                <input type="text" id="phoneNo" placeholder="phoneNo" required>
+            </div>
+            <div class="input-box">
+                <input type="text" id="collegeID" placeholder="College ID" required>
+            </div>
+           
+            <div class="input-box">
+                <input type="password" id="collegePassword" placeholder="College Password" required>
+                <div class="toggle-password">
+                    <img src="eye-icon.ico" alt="Show Password" id="eyeIcon" height="30px"
+                        style="margin-left:85%;position: relative; top: -38px;">
+                </div>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Toggle password visibility
+        const eyeIcon = document.getElementById('eyeIcon');
+        const passwordInput = document.getElementById('collegePassword');
+
+        eyeIcon.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            // Toggle icon image (replace 'eye-icon.ico' and 'eye-slash-icon.ico' with your actual image files)
+            eyeIcon.src = type === 'password' ? 'eye-icon.ico' : 'eye-slash-icon.ico';
+        });
+    </script>
+    <script src="register.js"></script>
+    
+</body>
+
+</html>

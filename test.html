@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background-color: #ffe031;
+            box-shadow: 0px 5px 0px #0000002a;
+            border-radius: 5px;
+        }
+
+        .logo img {
+            width: 80px;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin: 0 15px;
+        }
+
+        .search-bar input {
+            width: 500px;
+            max-width: 100%;
+            padding: 10px 40px 10px 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .search-bar img {
+            position: absolute;
+            right: calc(50% - 250px + 10px); /* Align inside the search bar */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        /* Cart Icon */
+        .cart-image img {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            right: 50px;
+
+        }
+
+        /* Profile Section */
+        .profile {
+            position: relative;
+        }
+
+        .user-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .profile-menu {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 50px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .profile:hover .profile-menu {
+            display: block;
+        }
+
+        .profile-menu a {
+            display: block;
+            padding: 10px 40px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .profile-menu a:hover {
+            background-color: #f3f3f3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .search-bar input {
+                width: 400px;
+                font-size: 14px;
+            }
+
+            .search-bar img {
+                right: calc(50% - 200px + 10px); /* Adjust for smaller search box */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            .logo img {
+                width: 60px;
+            }
+
+            .search-bar {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .search-bar input {
+                width: 90%;
+            }
+
+            .search-bar img {
+                right: 10%; /* Adjust for responsive scaling */
+            }
+
+            .cart-image img{
+                width: 30px;
+                height: 30px;
+                position: relative;
+                right: 10px;
+            }
+            .user-icon {
+                width: 30px;
+                height: 30px;
+            }
+
+            .profile-menu a {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body style="background: url(background.jpg); height: 100vh; background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="logo.png" alt="Logo"></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for food...">
+            <img src="search.png" alt="Search Icon">
+        </div>
+        <div class="cart-image">
+            <a href="cart.html"><img src="cart-image.png" alt="Cart"></a>
+        </div>
+        <div class="profile">
+            <a href="#"><img src="profile.png" alt="User Icon" class="user-icon"></a>
+            <div class="profile-menu">
+                <a href="profile.html">Profile</a>
+                <a href="cart.html">Cart</a>
+                <a href="login.html">Logout</a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
+
